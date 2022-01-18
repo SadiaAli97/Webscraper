@@ -10,8 +10,6 @@ import re
 import urllib
 import socket
 
-# Update the location to the location where you want the csv to be downloaded
-filename = "sitemap.csv"
 def uri_validator(x):
     print("url validating ", x)
     try:
@@ -41,6 +39,7 @@ def createSiteMap (url):
   processed_urls = set()
   site_map = {}
   broken_urls = set()
+  filename = "site_map.csv"
 
   while len(new_urls):
     # move url from the queue to processed url set
