@@ -102,7 +102,6 @@ def createSiteMap (url):
             if (isValidURL(local_link)):
                 local_urls.add(local_link)    
         else:
-            new_urls = deque([])
             continue
     site_map[url] = {"static_assets": static_assets, "links": local_urls}    
     for i in local_urls:
